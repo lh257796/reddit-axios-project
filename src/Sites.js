@@ -68,7 +68,7 @@ const Sites = () => {
         />
         <button disabled={!topic}>--Look for subreddit!--</button>
       </form>
-      <ol>
+      <ul className='grid'>
         {site?.map((post) => {
           return (
             <li key={post.data.id} className='card'>
@@ -97,7 +97,7 @@ const Sites = () => {
             </li>
           );
         })}
-      </ol>
+      </ul>
     </div>
   );
 };

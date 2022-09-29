@@ -5,9 +5,13 @@
 }
 
 .card > img {
-    display: grid;
   border-radius: 12%;
-  max-width: 125%;
+  max-width: 75%;
   height: auto;
 
+}
+
+.grid {
+  display: grid;
+  align-items: stretch;
 }

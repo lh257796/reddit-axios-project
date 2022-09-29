@@ -69,7 +69,7 @@ const Search = () => {
         <button disabled={!currentSearch}>--Look for subreddit!--</button>
       </form>
 
-      <ol>
+      <ul className='grid'>
         {search?.map((post) => {
           return (
             <li key={post.data.id} className='card'>
@@ -98,7 +98,7 @@ const Search = () => {
             </li>
           );
         })}
-      </ol>
+      </ul>
 
     </div>
   );
