@@ -1,0 +1,13 @@
+.card {
+  font-size: 21px;
+  border: solid lightcoral;
+  padding: 25px;
+}
+
+.card > img {
+    display: grid;
+  border-radius: 12%;
+  max-width: 125%;
+  height: auto;
+
+}
