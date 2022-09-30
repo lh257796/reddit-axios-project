@@ -7,6 +7,7 @@ import './Cards.css'
 
 const Sites = () => {
   const [topic, setTopic] = useState("");
+  const [toggle, setToggle] = useState(true);
   //   const [site, setSite] = useState('');
   const dispatch = useDispatch();
   const { site } = useSelector((state) => state);
@@ -16,12 +17,15 @@ const Sites = () => {
     ev.preventDefault();
     console.log("Topic: ", topic);
     // const str = `https://www.reddit.com/r/${topic}&raw_json=1`;
-    const str = `https://www.reddit.com/r/${topic}/hot.json?limit=60&raw_json=1&include_over_18=on`
+    const str = `https://www.reddit.com/r/${topic}/hot.json?limit=59&raw_json=1&include_over_18=on&allow_videos=false`
+
 
     // const str = `https://www.reddit.com/search.json?q=${topic}&raw_json=1&sort=hot&limit=30&include_over_18=on`
     dispatch(setSite(str));
     // handleSite(topic);
   };
+
+//maybe: &allow_videos=false
 
   //   const handleSite = async (topic) => {
   //     const res = await axios.get(`https://www.reddit.com/r/${topic}/hot/.json`);
@@ -72,7 +76,7 @@ const Sites = () => {
         {site?.map((post) => {
           return (
             <li key={post.data.id} className='card'>
-              {post.data.title}
+              <small>{post.data.title}</small>
               <br />
               <img
                 className=".img"
@@ -87,8 +91,7 @@ const Sites = () => {
                 </small>
               </em>{" "}
               {<br />}
-              <small>Upvotes: {post.data.score}</small> {<br />}
-              <small>Comments: {post.data.num_comments}</small> {<br />}
+              <small>|^|: {post.data.score} Comments: {post.data.num_comments}</small> {<br />}
               <small> Date posted: {convert(post.data.created)}</small>
               {<br />}
               <small>

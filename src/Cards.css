@@ -1,17 +1,49 @@
-.card {
-  font-size: 21px;
-  border: solid lightcoral;
-  padding: 25px;
-}
 
 .card > img {
-  border-radius: 12%;
-  max-width: 75%;
-  height: auto;
-
+  border-radius: 2.2%;
+  max-width: 100%;
 }
+
+
 
 .grid {
   display: grid;
   align-items: stretch;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  grid-template-rows: auto;
+
+}
+
+.grid > .card {
+  border: 1px solid blueviolet;
+  padding: 0 1px 1px 1px;
+}
+
+
+.grid > .card img {
+
+}
+
+* {
+  font-size: 9px;
+  background: #cce5ff;
+}
+
+.card {
+  border: solid lightcoral;
+}
+
+ul {
+  background: black;
+  padding: 5px;
+}
+
+ul li {
+  background: #cce5ff;
+  color: darkblue;
+}
+
+* > nav {
+  background: white
 }

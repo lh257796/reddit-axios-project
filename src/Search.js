@@ -87,11 +87,9 @@ const Search = () => {
                   <a href={post.data.url}> {post.data.url}</a>
                 </small>
               </em>{" "}
-              {<br />}
-              <small>Upvotes: {post.data.score}</small> {<br />}
-              <small>Comments: {post.data.num_comments}</small> {<br />}
+
+              <small>Upvotes: {post.data.score} updoots, {post.data.num_comments} comments</small> {<br />}
               <small> Date posted: {convert(post.data.created)}</small>
-              {<br />}
               <small>
                 <em>permalink: {post.data.permalink}</em>
               </small>
